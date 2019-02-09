@@ -6,6 +6,7 @@ import styled, {
 
 export const StyledContainer = styled.div `
 
+    padding-top: 10px;
     width: 500px;
     text-align: center;
     overflow: hidden;
@@ -47,16 +48,16 @@ export const StyledSlide = styled.div `
     flex-shrink: 0;
     height: 100%;
     display: flex;
-    background-color: rgb(53, 131, 224);
     align-items: center;
+    background: rgb(53, 131, 224);
     justify-content: center;
     border-radius: 10px;
     transform-origin: center center;
     transform: scale(1);
     transition: transform 0.5s;
-    :target {
+    /* :target {
         transform: scale(0.8);
-    }
+    } */
 
 
 `

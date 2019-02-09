@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyledSlider, StyledSlide, StyledContainer, StyledAnchor } from '../styles/SliderStyl';
+import { StyledSlider, StyledSlide, StyledContainer, StyledAnchor } from '../styles/Slider';
 
 export default class Slider extends Component {
     render() {
