@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyledHeader, StyledImg, StyledFooter, StyledSide, StyledNav, StyledList, StyledItem, StyledAnchor, StyledArrow, StyledFooterImage, StyledLoginItem } from '../styles/Basic';
+import { StyledHeader, StyledImg, StyledFooter, StyledSide, StyledNav, StyledList, StyledItem, StyledAnchor, StyledArrow, StyledFooterImage, StyledLoginItem, StyledCollapsed } from '../styles/Basic';
 import { StyledSideCard } from '../styles/Card';
 
 export class Header extends Component {
@@ -65,33 +65,68 @@ export class NavBar extends Component {
             <StyledNav>
                 <StyledList>
                 <StyledLoginItem>
-                        <StyledAnchor href={'/login'} color={'rgb(53, 131, 224)'}>
+                        <StyledAnchor toggle='0' href={'/login'} color={'rgb(53, 131, 224)'}>
                             ورود/ثبت نام
                         </StyledAnchor>
                     </StyledLoginItem>
-                    <StyledItem>
+                    <StyledItem onClick={e => this.props.onToggle(e, '1')}>
                         <StyledAnchor>
                             معرفی نهاد
-                            <StyledArrow left/>
                         </StyledAnchor>
+                        <StyledArrow open={this.props.toggle_id === '1' ? true : false}/>
                     </StyledItem>
-                    <StyledItem>
-                        <StyledAnchor onClick={e => this.props.onToggle(e, 2)}>
-                            {this.props.toggle_id}هییت دانشجویی
-                        <StyledArrow left/>
+                    <StyledCollapsed open={this.props.toggle_id === '1' ? true : false} >
+                        <StyledAnchor>
+                            مسئول نهاد
                         </StyledAnchor>
+                    </StyledCollapsed>
+                    <StyledCollapsed open={this.props.toggle_id === '1' ? true : false} >
+                        <StyledAnchor>
+                            معاون نهاد
+                        </StyledAnchor>
+                    </StyledCollapsed>
+                    <StyledCollapsed open={this.props.toggle_id === '1' ? true : false} >
+                        <StyledAnchor>
+                            مدیر اجرائی
+                        </StyledAnchor>
+                    </StyledCollapsed>
+                    <StyledCollapsed open={this.props.toggle_id === '1' ? true : false} >
+                        <StyledAnchor>
+                            واحد خواهران
+                        </StyledAnchor>
+                    </StyledCollapsed>
+                    <StyledCollapsed open={this.props.toggle_id === '1' ? true : false} >
+                        <StyledAnchor>
+                            مسئول ارتباطات و هماهنگی
+                        </StyledAnchor>
+                    </StyledCollapsed>
+                    <StyledItem onClick={e => this.props.onToggle(e, '2')}>
+                        <StyledAnchor>
+                            هییت دانشجویی
+                        </StyledAnchor>
+                        <StyledArrow open={this.props.toggle_id === '2' ? true : false} />
                     </StyledItem>
-                    <StyledItem>
+                    <StyledCollapsed open={this.props.toggle_id === '2' ? true : false} >
+                        <StyledAnchor>
+                            برادران
+                        </StyledAnchor>
+                    </StyledCollapsed>
+                    <StyledCollapsed open={this.props.toggle_id === '2' ? true : false} >
+                        <StyledAnchor>
+                            خواهران
+                        </StyledAnchor>
+                    </StyledCollapsed>
+                    <StyledItem onClick={e => this.props.onToggle(e, '3')}>
                         <StyledAnchor>
                             کانونها
                         </StyledAnchor>
                     </StyledItem>
-                    <StyledItem>
+                    <StyledItem onClick={e => this.props.onToggle(e, '4')}>
                         <StyledAnchor>
                             اساسنامه نهاد
                         </StyledAnchor>
                     </StyledItem>
-                    <StyledItem>
+                    <StyledItem onClick={e => this.props.onToggle(e, '5')}>
                         <StyledAnchor>
                             تماس با نهاد
                         </StyledAnchor>

@@ -54,8 +54,8 @@ export const StyledFieldSet = styled.fieldset `
 
 export const StyledLabel = styled.label `
 
-    position: absolute;  
-    top: 18px;
+    position: absolute; 
+    top: 10px;
     right: 0px;
     font-size: 20px;
     color: rgba(0, 0, 0, 0.3);
@@ -77,12 +77,13 @@ export const StyledAfter = styled.div `
 
 `
 
-export const StyledText = styled.h3 `
+export const StyledText = styled.p `
 
     align-self: flex-end;
     margin: 0px 40px;
     font-size: 18px;
-
+    direction: rtl;
+    
 `
 
 export const StyledDiscription = styled.p `

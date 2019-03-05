@@ -1,24 +1,14 @@
 import React, { Component } from 'react';
 import { StyledSlider, StyledSlide, StyledContainer, StyledAnchor } from '../styles/Slider';
+import { StyledNewsImage } from '../styles/News';
 
 export default class Slider extends Component {
     render() {
         return (
             <StyledContainer>
-                <StyledAnchor href={"#slide1"}>
-                    1
-                </StyledAnchor>
-                <StyledAnchor href={"#slide2"}>
-                    2
-                </StyledAnchor>
-                <StyledAnchor href={"#slide3"}>
-                    3
-                </StyledAnchor>
                 <StyledSlider>
                     <StyledSlide id={"slide1"}>
-                        <h1>
-                            1
-                        </h1>
+                        <StyledNewsImage img={"http://www.goftare.com:4231/uploads/img_1551711962993.jpg"} />
                     </StyledSlide>
                     <StyledSlide id={"slide2"}>
                         <h1>
@@ -30,6 +20,10 @@ export default class Slider extends Component {
                             3
                         </h1>
                     </StyledSlide>
+                    <div>
+                        asd
+                        <i className="fa fa-arrow-left fa-2x" >asdasd</i>
+                    </div>
                 </StyledSlider>
             </StyledContainer>
         )

@@ -8,20 +8,38 @@ export const StyledNewsContainer = styled.div `
     display: flex;
     flex-direction: column;
     min-height: 440px;
-    align-items: flex-end;
+    align-items: center;
+    
+    /* max-width: 800px; */
+`
+
+export const StyledNewsImage = styled.div `
+
+    background-image: url(${props => props.img});
+    width: 100%;
+    background-position: 50%;
+    background-size: cover;
+    height: 100%;
+    ${props => props.min && css `
+        min-height: 600px;
+    `}
+    border-radius: 5px;
+
 
 `
 
-export const StyledNewsImage = styled.img `
+export const StyledDescription = styled.h3 `
 
-    width: 100%;
-    height: 100%;
+    padding: 20px 20px;
+    /* font-size: 16px; */
+    color: #4F5052;
+    direction: rtl;
 
 `
 
 export const StyledNewsTitle = styled.h1 `
 
-    padding: 10px 20px;
+    padding: 30px 20px;
 
 `
 
@@ -31,23 +49,24 @@ export const StyledInfoContainer = styled.div `
     width: 100%;
     justify-content: space-between;
     color: #b5b5b5;
-    direction: rtl;
+    /* direction: rtl; */
 
 `
 
-export const StyledNewsInfo = styled.h4 `
+export const StyledNewsInfo = styled.p `
 
-    padding: 0px 20px;
+    padding: 40px 50px;
 
 `
 
 
 export const StyledTextContainer = styled.div `
 
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column; 
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
     padding: 10px 20px;
     direction: rtl;
 
@@ -56,6 +75,8 @@ export const StyledTextContainer = styled.div `
 
 export const StyledSuggestion = styled.h3 `
 
-    margin: 40px 50px;
+    margin: 20px 20px;
+    width: 100%;
+    height: 100%
 
 `

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { HomeView } from '../../views/HomeView';
-import { fetchSliderInfo } from '../../actions/Home/actions';
+// import { fetchNews } from '../../actions/Home/actions';
 import { toggleCollapse } from '../../actions/Home/actionCreators';
 
 
@@ -29,7 +29,7 @@ class Home extends Component {
 
 const mapStateToProps = state => {
     return {
-        toggle_id: state.home.toggle_id
+        toggle_id: state.home.toggle_id,
     };
 };
 
@@ -38,7 +38,7 @@ const mapDispatchToProps = dispatch => {
     return {
         onToggle: id => {
             dispatch(toggleCollapse(id))
-          },
+        },
     };
 };
 

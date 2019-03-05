@@ -1,45 +1,28 @@
 import React, { Component } from 'react';
 import { StyledContainer, StyledNews, StyledNewsInfo, StyledNewsImage, StyledNewsTitle, StyledNewsDiscription, StyledNewsAuthor, StyledNewsDate  } from '../styles/List';
+// import { StyledPagination, StyledPageAnchor } from '../styles/Button';
+import { Link } from 'react-router-dom';
 
 export class List extends Component {
     render() {
         return(
             <StyledContainer>
                 <StyledNews>
-                    <StyledNewsImage />
+                    <StyledNewsImage img={"http://www.goftare.com:4231/"+ this.props.img}/>
                     <StyledNewsInfo>
                         <StyledNewsTitle>
-                            <a href={'/news/main'} style={{textDecoration: 'none', color: 'black'}}>
-                            تیتر خبر
-                            </a>
+                        <Link style={{textDecoration: 'none', color: 'black'}} to={`/news/${this.props.id}`}>
+                            {this.props.title}
+                        </Link>
                         </StyledNewsTitle>
                         <StyledNewsDiscription>
-                            توضیح خبر
+                            {this.props.description}
                         </StyledNewsDiscription>
                         <StyledNewsAuthor>
-                            نویسنده
+                            نویسنده : {this.props.author}
                         </StyledNewsAuthor>
                         <StyledNewsDate>
-                            ۲۰ مهر
-                        </StyledNewsDate>
-                    </StyledNewsInfo>
-                </StyledNews>
-                <StyledNews>
-                    <StyledNewsImage />
-                    <StyledNewsInfo>
-                        <StyledNewsTitle>
-                        <a href={'/news/main'} style={{textDecoration: 'none', color: 'black'}}>
-                            تیتر خبر
-                        </a>
-                        </StyledNewsTitle>
-                        <StyledNewsDiscription>
-                            توضیح خبر
-                        </StyledNewsDiscription>
-                        <StyledNewsAuthor>
-                            نویسنده
-                        </StyledNewsAuthor>
-                        <StyledNewsDate>
-                            ۲۰ مهر
+                            تاریخ : {this.props.date}
                         </StyledNewsDate>
                     </StyledNewsInfo>
                 </StyledNews>

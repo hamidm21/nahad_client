@@ -42,3 +42,36 @@ export const StyledFormButton = styled.button `
 
 
 `
+
+export const StyledPagination = styled.div `
+
+    display: flex;
+    margin-bottom: 10px;
+    min-height: 40px;
+    /* background-color: #eee; */
+    border: 1px solid gray;
+    border-radius: 5px;
+
+`
+
+export const StyledPageAnchor = styled.a `
+
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+
+
+    :hover {
+        background-color: #ddd;
+        border-radius: 5px;
+    }
+
+
+    ${props => props.active && css `
+
+        background-color: rgb(53, 131, 224);
+        color: white;
+        border-radius: 5px;
+
+    `}
+`

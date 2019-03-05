@@ -52,7 +52,7 @@ export class RegisterForm extends Component {
                 <StyledContainer height={'650px'}>
                     <StyledLink href={'/login'}>
                         <StyledFormButton>
-                            ورود
+                        ورود
                         </StyledFormButton>
                     </StyledLink>
                     <StyledLinkRight href={'/'}>
@@ -66,23 +66,23 @@ export class RegisterForm extends Component {
                     <StyledDiscription>
                        .در صورت داشتن حساب کاربری از ورود استفاده کنید
                     </StyledDiscription>
-                    <StyledForm autoComplete={'off'} >
+                    <StyledForm autoComplete={'off'} onSubmit={this.props.handleSubmit}>
                         <StyledFieldSet>
-                        <StyledInput id={'username'} type={'text'} name={'username'} required/>
+                        <StyledInput onChange={this.props.handleChange} id={'username'} type={'text'} name={'username'} value={this.props.username} required/>
                         <StyledLabel for={'username'}>نام کاربری</StyledLabel>
                         <StyledAfter />
                         </StyledFieldSet>
                         <StyledFieldSet>
-                        <StyledInput id={'email'} type={'email'} name={'email'} required/>
+                        <StyledInput onChange={this.props.handleChange} id={'email'} type={'email'} name={'email'} value={this.props.email} required/>
                         <StyledLabel for={'email'}>ایمیل</StyledLabel>
                         <StyledAfter />
                         </StyledFieldSet>
                         <StyledFieldSet>
-                        <StyledInput id={'password'} type={'password'} name={'password'} required/>
+                        <StyledInput onChange={this.props.handleChange} id={'Rpassword'} type={'password'} name={'password'} value={this.props.password} required/>
                         <StyledLabel for={'password'}>رمز عبور</StyledLabel>
                         <StyledAfter />
                         </StyledFieldSet>
-                        <StyledSubmitForm>
+                        <StyledSubmitForm type="submit" value="Submit">
                             ثبت نام
                         </StyledSubmitForm>
                     </StyledForm>

@@ -91,7 +91,6 @@ export const StyledMain = styled.div `
     border-radius: 6px;
     
 
-
 `
 
 export const StyledList = styled.ul `
@@ -108,14 +107,30 @@ export const StyledList = styled.ul `
 export const StyledItem = styled.li `
 
     padding: 10px;
+    position: relative;
     :hover {
-        background-color: ;
+        background-color: #A0C9E5;
+    }
+`
+
+export const StyledCollapsed = styled.li `
+
+    padding: 10px 25px 10px 0px;
+    font-size: 0.9375rem;
+    display: none;
+    overflow: hidden;
+    color: #555555;
+    ${props => props.open === true && css `
+        display: block;
+    `}
+    :hover {
+        background-color: #A0C9E5;
     }
 `
 
 export const StyledLoginItem = styled.li `
 
-    margin: 5px 3px;
+    margin: 15px 3px;
     /* border-bottom: 1px solid gray; */
 
 `
@@ -132,14 +147,16 @@ export const StyledArrow = styled.i `
 
     border: solid black;
     border-width: 0 3px 3px 0;
-    display: inline-block;
+    position: absolute;
+    left: 15px;
+    top: 40%;
     padding: 3px;
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
     float: left;
-    ${props => props.active && css `    
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+    ${props => props.open === true && css `
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
     `}
 
 `

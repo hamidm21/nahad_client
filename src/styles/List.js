@@ -24,6 +24,7 @@ export const StyledNews = styled.div `
     border-radius: 8px;
     flex-grow: 1;
     max-width: 620px;
+    box-shadow: 0 6px 10px 0 rgba(62,57,107,.2),0 2px 9px 0 rgba(62,57,107,.2);
     :hover {
         box-shadow: 0 10px 40px 0 rgba(62,57,107,.2),0 2px 9px 0 rgba(62,57,107,.2);
         cursor: pointer;
@@ -45,12 +46,14 @@ export const StyledNewsInfo = styled.div `
 
 export const StyledNewsImage = styled.div `
 
+    position: relative;
+    left: -5px;
     background-size: cover;
     background-position: 50%;
-    background-color: #b5b5b5
-    background-image: url('http://www.nahad.ir/uploads/546_4962_1494318708765_hed_rast.png');
+    background-color: #b5b5b5;
+    background-image: url(${props => props.img});
     margin-top: -10px;
-    border-radius: 3px;
+    border-radius: 5px;
     will-change: transform;
     -webkit-transition: -webkit-transform .3s cubic-bezier(.52,.28,.47,1.15);
     transition: -webkit-transform .3s cubic-bezier(.52,.28,.47,1.15);
@@ -70,28 +73,34 @@ export const StyledNewsDate = styled.span `
     left: 0;
     bottom: 0;
     padding: 10px;
+    font-size: 16px;
 
 
 `
 
 export const StyledNewsTitle = styled.h1 `
-
-    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    padding-top: 10px;
 
 `
 
 export const StyledNewsAuthor = styled.span `
 
     color: #b5b5b5;
+    margin-top: 10px;
     padding: 10px;
     position: absolute;
     right: 0;
     bottom: 0;
+    font-size: 16px;
+
 
 `
 
-export const StyledNewsDiscription = styled.h4 `
+export const StyledNewsDiscription = styled.p `
 
+    font-size: 14px;
     padding: 10px;
 
 `

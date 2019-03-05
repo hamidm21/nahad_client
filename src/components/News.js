@@ -1,41 +1,40 @@
 import React, { Component } from 'react';
-import { StyledNewsContainer, StyledNewsImage, StyledNewsTitle, StyledInfoContainer, StyledNewsInfo, StyledSuggestion } from '../styles/News';
+import { StyledTextContainer, StyledDescription, StyledNewsContainer, StyledNewsImage, StyledNewsTitle, StyledInfoContainer, StyledNewsInfo, StyledSuggestion } from '../styles/News';
 import { StyledText } from '../styles/Form';
+import moment from 'moment-jalaali';
 import { List } from './List';
+
 
 export class FullNews extends Component {
     render() {
         return (
             <StyledNewsContainer>
-                <StyledNewsImage alt={'عکس خبر'} src={'http://www.nahad.ir/uploads/546_4962_1494318708765_hed_rast.png'}/>
+                <StyledNewsImage min img={"http://www.goftare.com:4231/"+ this.props.news.img} />
                 <StyledInfoContainer>
                     <StyledNewsInfo>
-                        نویسنده: 
+                       نویسنده : {this.props.news.author}
                     </StyledNewsInfo>
                     <StyledNewsInfo>
-                        ۲۰ مهر  
+                      نوشته شده در تاریخ : {this.props.news.moment}
                     </StyledNewsInfo>
                 </StyledInfoContainer>
                 <StyledNewsTitle>
-                    تیتر خبر
+                    {this.props.news.title}
                 </StyledNewsTitle>
-                <StyledText>
-                    <p style={{direction: 'rtl'}}>
-                    به‌ گزارش مرکز ارتباطات و اطلاع رسانی نهاد نمایندگی مقام معظم رهبری در دانشگاه‌ها، حجت‌الاسلام والمسلمین مصطفی رستمی رئیس نهاد نمایندگی مقام معظم رهبری در دانشگاه‌ها در جمع دانشجویان عضو اتحادیه انجمن‌های اسلامی دانشجویان مستقل دانشگاه‌های کشور در اردوی جهاد اکبر با اشاره به دائما در تلاش بودن مؤمنین گفت: در روایتی از امام رضا(ع) آمده است، ایشان در کنار خانه خدا در جمع دوستان نشسته بودند و بیان کردند: زمانی که امام ما قیام کند و حکومت را در دست بگیرد، یاران و اطرافیان حضرت، فرصت نخواهند داشت؛ خوابشان بر زین مرکب‌ها و غذایشان غذای ساده و بدون جایی برای خواب خواهند بود، زیرا همواره در حال هجرت هستند، این دوران، دوران زحمت کشیدن مؤمنین است چرا که مؤمنین غرق در تلاش می‌شوند، که البته قاعده زندگی مؤمنانه اینگونه است.
-                    </p>
-
-                    <p style={{direction: 'rtl'}}>
-                    وی گفت: هدف شما این است که در فضای دانشگاهی جریان انقلابی حضور و بروز داشته باشد، گاهی جهاد، جهاد اصغر است که افراد به‌صورت فیزیکی در میدان حضور دارند و گاه جهاد اکبر است که در این جهاد شما با تبیین مبانی، با پاسخ‌های محکم و مستدل خود و جذب معتقدان به حکومت عدل، نفی شبهات، کار فکری و... در دانشگاه‌ها به دفاع از انقلاب می‌پردازید.
-                    </p>
-                    <p style={{direction: 'rtl'}}>
-                    وی گفت: جریان مؤمن و انقلابی برای تسهیل زندگی مردم در مسائل مادی و معنوی تلاش می‌کند. مجاهدان عرصه تحکیم مبانی دینی در جامعه از طرفی به‌دنبال آسایش مردم هستند و از طرفی در جهت ارتقای مردم در رسیدن به سعادت معنوی و اخروی تلاش می‌کنند. اینکه می‌گویند بهشتی شدن افراد جامعه ربطی به حکومت ندارد حرف غلطی است؛ اصلا بنای حکومت دینی فراهم کردن امکاناتی جهت بهشتی شدن افراد است. در واقع یک نظام سیاسی هم به‌دنبال خوشبختی مردم در دنیا و هم به‌دنبال بهشتی شدن افراد است.
-                    </p>
-                </StyledText>
+                <StyledDescription>
+                    {this.props.news.description}
+                </StyledDescription>
+                <StyledTextContainer>
+                    <div dangerouslySetInnerHTML={{__html: this.props.news.text_tag}} />
+                </StyledTextContainer>
                 <StyledSuggestion>
-                    مطالعه بیشتر
+                    {/* <StyledDescription>
+                    مطالب مرتبط
+                    </StyledDescription> */}
+                {
+                    this.props.related.map((news, index) => <List title={news.title} description={news.description.substr(0, 100)} author={news.author} date={moment(news.moment, 'jYYYY/jMM/jDD HH:mm').format('jYY/jMM/jDD')} img={news.img} id={news._id} key={index}></List>)
+                }
                 </StyledSuggestion>
-                <List />
-                <List />
             </StyledNewsContainer>
         )
     }

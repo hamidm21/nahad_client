@@ -2,15 +2,19 @@ import {
     FETCH_SLIDER,
     FETCH_SLIDER_SUCCESS,
     FETCH_SLIDER_FAILED,
-    TOGGLE_COLLAPSE
+    TOGGLE_COLLAPSE,
+    FETCH_NEWS,
+    FETCH_NEWS_SUCCESS,
+    FETCH_NEWS_FAILED
 } from '../../actions/Home/actionTypes'
 
 
-let init = {
+const init = {
     slider_news: '',
-    toggled:{
-        id: ''
-    }
+    toggle_id: '',
+    loading: true,
+    errorMessage: '',
+    newsList:[]
 };
 
 export default function (state = init, action) {
@@ -18,9 +22,14 @@ export default function (state = init, action) {
         case FETCH_SLIDER:
             return { ...state};
         case FETCH_SLIDER_SUCCESS: 
-            return Object.assign({}, init, {slider_news: action.info})
-        case TOGGLE_COLLAPSE: 
-            return Object.assign({}, state, {toggle_id: action.id, is_toggled: !state.is_toggled });
+            return Object.assign({}, state, {slider_news: action.data})
+        case FETCH_SLIDER_FAILED:
+            return Object.assign({}, state, {messageError: action.message})
+        case TOGGLE_COLLAPSE:
+            if (action.id === state.toggle_id) {
+                return Object.assign({}, state, {toggle_id: ''});
+            }else
+                return Object.assign({}, state, {toggle_id: action.id});
         default : 
             return state; 
 

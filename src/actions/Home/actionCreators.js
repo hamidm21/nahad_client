@@ -26,3 +26,10 @@ export function toggleCollapse(id) {
     id
   }
 }
+
+export function onPaginate(id) {
+  return {
+    type: actionTypes.ON_PAGINATE,
+    id
+  }
+}

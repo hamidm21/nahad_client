@@ -15,7 +15,7 @@ class App extends Component {
           <Route path='/register' name='Register' component={ Register } />
           <Route path='/login' name='Login' component={ Login } />
           <Route path='/newsList/:category' name='News list' component={ NewsList } />
-          <Route path='/news/:title' name='News' component={ News } />
+          <Route path='/news/:id' name='News' component={ News } />
         </Switch> 
       </Router>
     );
