@@ -16,7 +16,9 @@ export class List extends Component {
                         </Link>
                         </StyledNewsTitle>
                         <StyledNewsDiscription>
+                        <Link style={{textDecoration: 'none', color: 'black'}} to={`/news/${this.props.id}`}>
                             {this.props.description}
+                            </Link>
                         </StyledNewsDiscription>
                         <StyledNewsAuthor>
                             نویسنده : {this.props.author}

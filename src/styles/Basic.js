@@ -6,18 +6,28 @@ import styled, {
 export const StyledHeader = styled.div `
     
     grid-area: header;
+    position: relative;
     display: flex;
+    width: 100%;
+    min-height: 140px;
     justify-content: space-between;
     align-items: center;
+    // box-shadow: 0 1px 2px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23);
+    // background-color: rgb(247,247,247);
     background-color: transparent;
 
 `
 
 export const StyledImg = styled.img `
     
+    grid-column-start: ${props => props.start};
     padding: 0px 20px;
+    position: absolute;
+    left: ${props => props.left};
+    right: ${props => props.right};
     width: ${props => props.width};
     height: ${props => props.height};
+    grid-area: header;
 
 `
 
@@ -27,10 +37,10 @@ export const StyledGrid = styled.div `
     width: 100%;
     display: grid;
     grid-gap: 10px;
-    grid-template-rows: 8rem 1fr 4rem;
-    grid-template-areas:    "header header header header header header"
-                            "side-bar main main main main nav-bar"
-                            "footer footer footer footer footer footer";
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas:    "header header header header header"
+                            "side-bar main main main nav-bar"
+                            "footer footer footer footer footer";
     background-color: transparent;
 
 `
@@ -52,6 +62,7 @@ export const StyledFooter = styled.footer `
 export const StyledSide = styled.div `
 
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    min-width: 16rem;
     grid-area: side-bar;
     display: flex;
     flex-direction: column;
@@ -84,6 +95,8 @@ export const StyledMain = styled.div `
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     grid-area: main;
     display: flex;
+    width: 100%;
+    height: 100%;
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
@@ -158,6 +171,20 @@ export const StyledArrow = styled.i `
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
     `}
+
+`
+
+
+export const StyledCategoryDevider = styled.div `
+
+    display: flex;
+    padding-right: 5rem;
+    padding-top: 4rem;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    font-weight: bold;
+    font-size: 2rem;
 
 `
 

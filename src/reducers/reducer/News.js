@@ -49,6 +49,7 @@ const init = {
 export default function (state = init, action) {
     switch (action.type) {
         case FETCH_NEWS:
+            console.log("started")
             return Object.assign({}, state, {loading: true})
         case FETCH_NEWS_SUCCESS:
             return Object.assign({}, state, {news: action.data, related: action.data.related , loading: false})

@@ -75,3 +75,19 @@ export const StyledPageAnchor = styled.a `
 
     `}
 `
+
+
+export const StyledCategoryButton = styled.button `
+
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* left: 0; */
+    background-color: transparent;
+    margin-top: 10px;
+    width: 100px;
+    height: 8%;
+    color: rgb(53, 131, 224);
+    border: solid rgb(53, 131, 224) 1px;
+    border-radius: 8px;
+
+`

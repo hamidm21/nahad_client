@@ -37,6 +37,9 @@ export function fetchNews(page, limit, category_name) {
           case 'معرفی کتاب': 
             category = 'book'
             break;
+          case 'همه خبر ها':
+            category = 'all'
+            break;
           default:
             category = ''
         }

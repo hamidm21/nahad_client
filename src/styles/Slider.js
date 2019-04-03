@@ -6,10 +6,10 @@ import styled, {
 
 export const StyledContainer = styled.div `
 
-    padding-top: 10px;
-    width: 500px;
+    margin-top: 20px;
+    width: 85%;
     text-align: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 
 `
 
@@ -27,10 +27,49 @@ export const StyledAnchor = styled.a `
     position: relative;
 
 `
+export const StyledArrow = styled.div `
+
+    /* z-index: 2; */
+    position: absolute;
+    left: ${props => props.left};
+    top: 150%;
+    /* display: none; */
+
+`
+
+
+export const StyledNewsTitle = styled.h3 `
+
+    position: absolute;
+    top: 160%;
+    right: 40px;
+    padding: 5px;
+    color: white;
+    border: solid #0069A1 2px;
+    border-radius: 8px;
+    direction: rtl;
+
+
+`
+
+export const StyledNewsDescription = styled.h4 `
+
+    position: absolute;
+    top: 160%;
+    right: 40px;
+    padding: 5px;
+    color: white;
+    border: solid #0069A1 2px;
+    border-radius: 8px;
+    direction: rtl;
+
+`
+
 export const StyledSlider = styled.div `
 
-    width: 500px;
-    height: 300px;
+    position: relative;
+    width: 100%;
+    height: 27rem;
     display: flex;
     overflow: hidden;
     border-radius: 5px;
@@ -38,13 +77,26 @@ export const StyledSlider = styled.div `
     -webkit-overflow-scrolling: touch;
     scroll-snap-points-x: repeat(500px);
     scroll-snap-type: mandatory;
+    &:hover ${StyledArrow} {
+        transition: top 0.2s;
+        top: 45%;
+    }
 
+    &:hover ${StyledNewsTitle} {
+        transition: top 0.1s;
+        top: 72%;
+    }
+
+    &:hover ${StyledNewsDescription} {
+        transition: top 0.1s;
+        top: 85%;
+    }
 
 ` 
 
 export const StyledSlide = styled.div `
 
-    width: 500px;
+    width: 100%;
     flex-shrink: 0;
     height: 100%;
     display: flex;

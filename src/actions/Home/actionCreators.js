@@ -6,17 +6,33 @@ export function fetchSlider() {
   }
 }
 
-export function fetchSliderSuccess(info) {
+export function fetchSliderSuccess(message, result, data) {
   return {
     type: actionTypes.FETCH_SLIDER_SUCCESS,
-    info
+    message,
+    result,
+    data
   }
 }
 
-export function fetchSliderFailed(problem) {
+export function fetchSliderFailed(message, result, data) {
   return {
     type: actionTypes.FETCH_SLIDER_FAILED,
-    problem
+    message,
+    result,
+    data
+  }
+}
+
+export function nextSlide() {
+  return {
+    type: actionTypes.NEXT_SLIDE
+  }
+}
+
+export function prevSlide() {
+  return {
+    type: actionTypes.PREV_SLIDE
   }
 }
 

@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import { StyledHeader, StyledImg, StyledFooter, StyledSide, StyledNav, StyledList, StyledItem, StyledAnchor, StyledArrow, StyledFooterImage, StyledLoginItem, StyledCollapsed } from '../styles/Basic';
 import { StyledSideCard } from '../styles/Card';
-
+import img from '../assets/img/bab301162171b7a78d6027083417ed1d (1).png'; 
+ 
 export class Header extends Component {
     render() {
         return (
             <StyledHeader>
-                <StyledImg height='100px' left='100px' alt={'نماد دانشگاه لرستان'} src={'http://limoographic.com/wp-content/uploads/2017/05/46.png'} />
-                <StyledImg height='100px' left='45%' top='0px' alt={'نماد نهاد'} src={'http://www.nahad.ir/uploads/546_4962_1494319312340_hed_vasat.png'} />
-                <StyledImg height='100px' right='100px' alt={'عکس أقا و امام'} src={'http://www.nahad.ir/uploads/546_4962_1494318708765_hed_rast.png'} />
+                {/* <StyledImg width='450px' height='150px' left='38%' alt={'نماد دانشگاه لرستان'} src={img}/> */}
+                <StyledImg height='130px' left='5%' alt={'نماد دانشگاه لرستان'} src={'http://limoographic.com/wp-content/uploads/2017/05/46.png'} />
+                <StyledImg height='130px' left='43%' alt={'نماد نهاد'} src={'http://www.nahad.ir/uploads/546_4962_1494319312340_hed_vasat.png'} />
+                <StyledImg height='130px' left='80%' alt={'عکس أقا و امام'} src={'http://www.nahad.ir/uploads/546_4962_1494318708765_hed_rast.png'} />
             </StyledHeader>
         )
     }
@@ -43,16 +45,20 @@ export class SideBar extends Component {
         return (
             <StyledSide>
                 <StyledSideCard>
-                    <a>06633206474</a>
+                    <a style={{marginRight: '10px'}}>06633206474</a>
+                    <i style={{position: 'absolute', right: '10px'}} class="fas fa-phone fa-2x"></i>
                 </StyledSideCard>
                 <StyledSideCard>
-                    <a>ضیافت اندیشه اساتید</a>
+                    <p style={{marginRight: '40px'}}>ضیافت اندیشه اساتید</p>
+                    <i style={{position: 'absolute', right: '10px'}} class="fas fa-handshake fa-2x"></i>
                 </StyledSideCard>
                 <StyledSideCard>
-                    <a>اپلیکیشن نهاد</a>
+                    <p style={{marginRight: '10px'}} >اپلیکیشن نهاد</p>
+                    <i style={{position: 'absolute', right: '10px'}} class="fas fa-mobile-alt fa-2x"></i>
                 </StyledSideCard>
                 <StyledSideCard>
-                    کلام رهبری
+                    <p style={{marginRight: '10px'}}>کلام رهبری</p>
+                    <i style={{position: 'absolute', right: '10px'}} class="fas fa-quote-right fa-2x"></i>
                 </StyledSideCard>
             </StyledSide>
         )

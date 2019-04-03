@@ -14,7 +14,7 @@ export class NewsListView extends Component {
             pagesList.push(i)
         }
         pagesList.reverse();
-        const NewsList = news.map((news, index) => <List title={news.title} description={news.description.substr(0, 170)} author={news.author} date={moment(news.moment, 'jYYYY/jMM/jDD HH:mm').format('jYY/jMM/jDD')} img={news.img} id={news._id} key={index}></List>)
+        // const NewsList = news.map((news, index) => <List title={news.title} description={news.description.substr(0, 170)} author={news.author} date={moment(news.moment, 'jYYYY/jMM/jDD HH:mm').format('jYY/jMM/jDD')} img={news.img} id={news._id} key={index}></List>)
 
         return(
             <StyledGrid>
@@ -23,7 +23,7 @@ export class NewsListView extends Component {
                     <StyledMain>
                         
                     {
-                        news.map((news, index) => <List title={news.title} description={news.description.substr(0, 170)} author={news.author} date={moment(news.moment, 'jYYYY/jMM/jDD HH:mm').format('jYY/jMM/jDD')} img={news.img} id={news._id} key={index}></List>)
+                        news.map((news, index) => <List title={news.title} description={news.description.length >= 80 ? news.description.substr(0, 80) + '...' : news.description} author={news.author} date={moment(news.moment, 'jYYYY/jMM/jDD HH:mm').format('jYY/jMM/jDD')} img={news.img} id={news._id} key={index}></List>)
                     }
                     <StyledPagination>
                         {
