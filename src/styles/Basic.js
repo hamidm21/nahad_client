@@ -12,9 +12,13 @@ export const StyledHeader = styled.div `
     min-height: 140px;
     justify-content: space-between;
     align-items: center;
-    // box-shadow: 0 1px 2px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23);
-    // background-color: rgb(247,247,247);
+    /* box-shadow: 0 1px 2px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23);
+    background-color: rgb(247,247,247); */
     background-color: transparent;
+
+    @media (max-width: 470px) {
+        display: none;       
+    }
 
 `
 
@@ -43,6 +47,14 @@ export const StyledGrid = styled.div `
                             "footer footer footer footer footer";
     background-color: transparent;
 
+    @media (max-width: 470px) {
+        grid-template-areas:    " header header header "
+                            " main main main "
+                            " footer footer footer ";
+        grid-gap: 0px;
+
+        /* grid-template-rows: 1fr; */
+    }
 `
 
 export const StyledFooter = styled.footer `
@@ -61,8 +73,8 @@ export const StyledFooter = styled.footer `
 
 export const StyledSide = styled.div `
 
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    min-width: 16rem;
+    /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
+    min-width: 14rem;
     grid-area: side-bar;
     display: flex;
     flex-direction: column;
@@ -70,22 +82,30 @@ export const StyledSide = styled.div `
     align-items: flex-start;
     align-self: start;
     border-radius: 6px;
-    background-color: rgb(247,247,247);
+    /* background-color: rgb(247,247,247); */
+    background-color: transparent;
+    @media (max-width: 470px) {
+        display: none;
+    }
 
 `
 
 export const StyledNav = styled.div `
 
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
     grid-area: nav-bar;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(247,247,247);
+    /* background-color: rgb(247,247,247); */
     align-self: start;
+    background-color: transparent;
     min-height: 400px;
     border-radius: 6px;
-    min-width: 220px;
+    min-width: 14rem;
+    @media (max-width: 470px) {
+        display: none;
+    }
 
 
 `
@@ -102,6 +122,10 @@ export const StyledMain = styled.div `
     align-items: center;
     background-color: rgb(247,247,247);
     border-radius: 6px;
+    @media (max-width: 470px) {
+        /* overflow: none; */
+        width: 360px;
+    }
     
 
 `

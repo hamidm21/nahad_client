@@ -9,6 +9,9 @@ export const StyledContainer = styled.div `
     margin-top: 20px;
     width: 85%;
     text-align: center;
+    /* @media (max-width: 470px) {
+        height: 200px;
+    } */
     /* overflow: hidden; */
 
 `
@@ -92,6 +95,9 @@ export const StyledSlider = styled.div `
         top: 85%;
     }
 
+    @media (max-width: 470px) {
+        height: 12rem;
+    }    
 ` 
 
 export const StyledSlide = styled.div `

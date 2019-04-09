@@ -20,7 +20,7 @@ export const StyledCategory = styled.div `
 
     /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
     width: 23rem;
-    height: 42rem;
+    height: 40rem;
     margin: 1rem;
     position: relative;
     /* border-radius: 8px; */
@@ -30,7 +30,9 @@ export const StyledCategory = styled.div `
     align-items: center;
     background-color: white;
     background-color: rgb(247,247,247);
-    
+    /* @media (min-width: 470px) {
+        width: 100%;
+    } */
     
 `
 
@@ -139,7 +141,7 @@ export const StyledCategoryNewsAuthor = styled.p `
 
 export const StyledCategoryNewsDate = styled.p `
 
-    padding-right: 15px;
+    /* padding-right: 15px; */
     color: rgba(0,0,0,.54);
     color: #b5b5b5;
     font-family: 'IRANSans';
@@ -175,8 +177,8 @@ export const StyledAnchor = styled.a `
     position: absolute;
     overflow: auto;
     background-color: #fff;
-    // background-color: rgb(0,0,0); /* Fallback color */
-    // background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    /* background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4); Black w/opacity/see-through */
 
 `
 

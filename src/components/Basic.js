@@ -44,7 +44,7 @@ export class SideBar extends Component {
     render() {
         return (
             <StyledSide>
-                <StyledSideCard>
+                {/* <StyledSideCard>
                     <a style={{marginRight: '10px'}}>06633206474</a>
                     <i style={{position: 'absolute', right: '10px'}} class="fas fa-phone fa-2x"></i>
                 </StyledSideCard>
@@ -59,7 +59,7 @@ export class SideBar extends Component {
                 <StyledSideCard>
                     <p style={{marginRight: '10px'}}>کلام رهبری</p>
                     <i style={{position: 'absolute', right: '10px'}} class="fas fa-quote-right fa-2x"></i>
-                </StyledSideCard>
+                </StyledSideCard> */}
             </StyledSide>
         )
     }
@@ -69,7 +69,7 @@ export class NavBar extends Component {
     render() {
         return (
             <StyledNav>
-                <StyledList>
+                {/* <StyledList>
                 <StyledLoginItem>
                         <StyledAnchor toggle='0' href={'/login'} color={'rgb(53, 131, 224)'}>
                             ورود/ثبت نام
@@ -137,7 +137,7 @@ export class NavBar extends Component {
                             تماس با نهاد
                         </StyledAnchor>
                     </StyledItem>
-                </StyledList>
+                </StyledList> */}
             </StyledNav>
         )
     }
