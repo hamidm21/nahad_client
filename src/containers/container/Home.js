@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { HomeView } from '../../views/HomeView';
-import { fetchSliderNews } from '../../actions/Home/actions';
+import { fetchSliderNews, fetchCategoryNews } from '../../actions/Home/actions';
 import { toggleCollapse, nextSlide, prevSlide } from '../../actions/Home/actionCreators';
 
 
@@ -39,6 +39,7 @@ class Home extends Component {
                 prevSlide={this.prevSlide}
                 slider_news={this.props.slider_news}
                 current_slide={this.props.current_slide}
+                category_news={this.props.category_news}
            />
         );
       }
@@ -49,7 +50,8 @@ const mapStateToProps = state => {
     return {
         toggle_id: state.home.toggle_id,
         slider_news: state.home.slider_news,
-        current_slide: state.home.current_slide
+        current_slide: state.home.current_slide,
+        category_news: state.home.category_news
     };
 };
 
@@ -67,6 +69,9 @@ const mapDispatchToProps = dispatch => {
         },
         fetchSliderNews: () => {
             dispatch(fetchSliderNews())
+        },
+        fetchCategoryNews: ()=> {
+            dispatch(fetchCategoryNews())
         }
     };
 };

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyledHeader, StyledImg, StyledFooter, StyledSide, StyledNav, StyledList, StyledItem, StyledAnchor, StyledArrow, StyledFooterImage, StyledLoginItem, StyledCollapsed } from '../styles/Basic';
+import { StyledHeader, StyledImg, StyledFooter, StyledSide, StyledNav, StyledList, StyledItem, StyledAnchor, StyledArrow, StyledFooterImage, StyledLoginItem, StyledCollapsed, StyledNavItem } from '../styles/Basic';
 import { StyledSideCard } from '../styles/Card';
 import img from '../assets/img/bab301162171b7a78d6027083417ed1d (1).png'; 
  
@@ -12,6 +12,18 @@ export class Header extends Component {
                 <StyledImg height='130px' left='43%' alt={'نماد نهاد'} src={'http://www.nahad.ir/uploads/546_4962_1494319312340_hed_vasat.png'} />
                 <StyledImg height='130px' left='80%' alt={'عکس أقا و امام'} src={'http://www.nahad.ir/uploads/546_4962_1494318708765_hed_rast.png'} />
             </StyledHeader>
+        )
+    }
+}
+
+export class Nav extends Component {
+    render() {
+        return (
+            <StyledNav>
+                <StyledNavItem>
+                    bullshit
+                </StyledNavItem>
+            </StyledNav>
         )
     }
 }
@@ -33,7 +45,7 @@ export class Footer extends Component {
                     <StyledFooterImage src={'http://www.nahad.ir/uploads/77_733253.png'}></StyledFooterImage>
                     <StyledFooterImage src={'http://www.nahad.ir/uploads/logo_b_757406.png'}></StyledFooterImage>
                     <StyledFooterImage src={'http://www.nahad.ir/uploads/logo1_757408.png'}></StyledFooterImage>
-
+                    
             </StyledFooter>
         )
     }

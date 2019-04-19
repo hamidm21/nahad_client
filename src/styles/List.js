@@ -9,6 +9,7 @@ export const StyledContainer = styled.div `
     justify-content: space-evenly;
     width: 100%;
     height: 100%;
+    padding: 2rem 1rem;
     align-items: flex-start;
 
 `
@@ -17,13 +18,14 @@ export const StyledContainer = styled.div `
 export const StyledNews = styled.div `
 
     display: flex;
-    margin: 20px 10px;
-    width: 480px;
-    height: 200px;
+    margin: 1rem 0.5rem;
+    width: 80%;
+    height: 13rem;
     background-color: #e1e1e1;
     border-radius: 8px;
     flex-grow: 1;
-    max-width: 620px;
+    max-width: 43rem;
+    min-width: 35rem;
     box-shadow: 0 6px 10px 0 rgba(62,57,107,.2),0 2px 9px 0 rgba(62,57,107,.2);
     :hover {
         box-shadow: 0 10px 40px 0 rgba(62,57,107,.2),0 2px 9px 0 rgba(62,57,107,.2);

@@ -19,7 +19,7 @@ export const StyledContainer = styled.div `
 export const StyledCategory = styled.div `
 
     /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
-    width: 23rem;
+    width: 20rem;
     height: 40rem;
     margin: 1rem;
     position: relative;

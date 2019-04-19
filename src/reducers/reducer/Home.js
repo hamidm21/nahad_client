@@ -4,7 +4,10 @@ import {
     FETCH_SLIDER_FAILED,
     TOGGLE_COLLAPSE,
     NEXT_SLIDE,
-    PREV_SLIDE
+    PREV_SLIDE,
+    FETCH_CATEGORY_NEWS,
+    FETCH_CATEGORY_NEWS_FAILED,
+    FETCH_CATEGORY_NEWS_SUCCESS
 } from '../../actions/Home/actionTypes'
 
 
@@ -49,6 +52,10 @@ export default function (state = init, action) {
                 return Object.assign({}, state, {current_slide: 2})
             }else
                 return Object.assign({}, state, {current_slide: --state.current_slide})
+        case FETCH_CATEGORY_NEWS:
+            return Object.assign({}, state, {
+                category_news: action.data
+            })
         default : 
             return state; 
 

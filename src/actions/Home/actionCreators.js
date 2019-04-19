@@ -49,3 +49,27 @@ export function onPaginate(id) {
     id
   }
 }
+
+export function fetchCategoryNews() {
+  return {
+    type: actionTypes.FETCH_CATEGORY_NEWS
+  }
+}
+
+export function fetchCategoryNewsSuccess(message, result, data) {
+  return {
+    type: actionTypes.FETCH_CATEGORY_NEWS_SUCCESS,
+    message,
+    result,
+    data
+  }
+}
+
+export function fetchCategoryNewsFailed(message, result, data){
+  return {
+    type: actionTypes.FETCH_CATEGORY_NEWS_FAILED,
+    message,
+    result,
+    data
+  }
+}

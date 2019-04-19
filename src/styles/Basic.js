@@ -26,7 +26,7 @@ export const StyledImg = styled.img `
     
     grid-column-start: ${props => props.start};
     padding: 0px 20px;
-    position: absolute;
+    /* position: absolute; */
     left: ${props => props.left};
     right: ${props => props.right};
     width: ${props => props.width};
@@ -66,7 +66,7 @@ export const StyledFooter = styled.footer `
     justify-content: center;
     align-items: center;
     background-color: rgb(247,247,247);
-    height:120px;
+    /* height:120px; */
     
 
 `
@@ -93,22 +93,26 @@ export const StyledSide = styled.div `
 export const StyledNav = styled.div `
 
     /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
-    grid-area: nav-bar;
+    /* grid-area: nav-bar; */
     display: flex;
     justify-content: center;
     align-items: center;
     /* background-color: rgb(247,247,247); */
     align-self: start;
     background-color: transparent;
-    min-height: 400px;
-    border-radius: 6px;
-    min-width: 14rem;
+    /* min-height: 400px; */
+    /* border-radius: 6px; */
+    /* min-width: 14rem; */
     @media (max-width: 470px) {
         display: none;
     }
 
 
 `
+
+export const StyledNavItem = styled.div `
+
+`;
 
 export const StyledMain = styled.div `
 
@@ -125,6 +129,8 @@ export const StyledMain = styled.div `
     @media (max-width: 470px) {
         /* overflow: none; */
         width: 360px;
+        border-radius: 0px;
+        box-shadow: 0;
     }
     
 
@@ -209,6 +215,12 @@ export const StyledCategoryDevider = styled.div `
     width: 100%;
     font-weight: bold;
     font-size: 2rem;
+    @media (max-width: 470px) {
+        /* justify-content: ; */
+        padding-right: 1.5rem;
+        padding-top: 3rem;
+        /* padding-top: 0px; */
+    }
 
 `
 

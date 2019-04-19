@@ -5,3 +5,6 @@ export const NEXT_SLIDE = 'next_slide';
 export const PREV_SLIDE = 'prev_slide';
 export const TOGGLE_COLLAPSE = 'toggle_collapse';
 export const ON_PAGINATE = 'on_paginate';
+export const FETCH_CATEGORY_NEWS = 'fetch_category_news';
+export const FETCH_CATEGORY_NEWS_SUCCESS = 'fetch_category_news_success';
+export const FETCH_CATEGORY_NEWS_FAILED = 'fetch_category_news_failed';

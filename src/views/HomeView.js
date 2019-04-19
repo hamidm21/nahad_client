@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Header, Footer, SideBar, NavBar} from '../components/Basic';
+import { Header, Footer, SideBar, NavBar, Nav} from '../components/Basic';
 import { StyledGrid, StyledMain, StyledCategoryDevider} from '../styles/Basic';
 import  Slider  from '../components/Slider';
 import { Category } from "../components/Card";
@@ -10,6 +10,7 @@ export class HomeView extends Component {
         return(
         <StyledGrid>
             <Header />
+            <Nav />
             <NavBar 
                 onToggle={this.props.onToggle}
                 toggle_id={this.props.toggle_id}
