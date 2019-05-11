@@ -77,11 +77,16 @@ export const StyledPageAnchor = styled.a `
 `
 
 
-export const StyledCategoryButton = styled.button `
+export const StyledCategoryButton = styled.div `
 
     /* position: absolute; */
     /* bottom: 0; */
     /* left: 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
     background-color: transparent;
     margin-top: 10px;
     width: 100px;

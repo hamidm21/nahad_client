@@ -5,7 +5,7 @@ import { StyledGrid, StyledMain } from '../styles/Basic';
 import { StyledPagination, StyledPageAnchor } from '../styles/Button';
 // moment.loadPersian([{dialect: 'persian-modern'}])
 
-export class NewsListView extends Component {
+export class SearchView extends Component {
     render() {
         const { news } = this.props;
         const pagesList = [];
@@ -13,13 +13,12 @@ export class NewsListView extends Component {
             pagesList.push(i)
         }
         pagesList.reverse();
-        // const NewsList = news.map((news, index) => <List title={news.title} description={news.description.substr(0, 170)} author={news.author} date={moment(news.moment, 'jYYYY/jMM/jDD HH:mm').format('jYY/jMM/jDD')} img={news.img} id={news._id} key={index}></List>)
 
         return(
             <StyledGrid>
                 <Header />
                 {/* <NavBar /> */}
-                    <StyledMain>   
+                    <StyledMain>
                     <div style={{display: 'flex', justifyContent: 'space-between', alignItems:'center', width: '100%'}} >
                         <SearchBar onChangeHandler={this.props.onChangeHandler} search_value={this.props.search_value} />
                         <NavDrawer />
@@ -37,7 +36,6 @@ export class NewsListView extends Component {
                         }
                     </StyledPagination>
                 </StyledMain>
-                {/* <SideBar /> */}
                 <Footer />
             </StyledGrid>
         )

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { NewsListView } from '../../views/NewsListView';
-import { fetchNews } from '../../actions/NewsList/actions';
-import { onPaginate, onChange } from '../../actions/Home/actionCreators';
+import { SearchView } from '../../views/SearchView';
+import { fetchSearchResult } from '../../actions/Search/actions';
+import { onPaginate, onChange } from '../../actions/Search/actionCreators';
 import loading from '../../assets/loading/Spin-1.3s-200px.svg'
-class NewsList extends Component {
+
+class Search extends Component {
   constructor(props) {
     super(props)
     this.onPaginate = this.onPaginate.bind(this);
@@ -12,7 +13,8 @@ class NewsList extends Component {
 }
 
   componentDidMount() {
-    this.props.fetchNews(this.props.page, 10, this.props.match.params.category)
+      console.log(this.props.match.params.search)
+    this.props.fetchSearchResult(this.props.page, 10, this.props.match.params.search)
   }
 
   onChange(e) {
@@ -22,16 +24,16 @@ class NewsList extends Component {
   onPaginate(e, id) {
       e.preventDefault()
       this.props.onPaginate(id);
-      this.props.fetchNews(id, 10, this.props.match.params.category)
+      this.props.fetchSearchResult(id, 10, this.props.match.params.search)
   }
 
   render() {
-        return this.props.loading || !this.props.news ? 
+        return this.props.loading ? 
         <div>
           <img style={{ width: '120px', height: '120px', position: 'fixed', top:'45%', left:'45%' }} src={loading}/>
         </div> :
         (
-          <NewsListView 
+          <SearchView 
           onPaginate={this.onPaginate}
           news={this.props.news}
           pages={this.props.pages}
@@ -45,11 +47,11 @@ class NewsList extends Component {
 
 const mapStateToProps = state => {
   return {
-      news: state.newsList.news,
-      page: state.home.page,
-      pages: state.newsList.pages,
-      loading: state.newsList.loading,
-      search_value: state.newsList.search_value
+      news: state.search.news,
+      page: state.search.page,
+      pages: state.search.pages,
+      loading: state.search.loading,
+      search_value: state.search.search_value
   };
 };
 
@@ -59,8 +61,8 @@ const mapDispatchToProps = dispatch => {
       onPaginate: id => {
         dispatch(onPaginate(id))
       },
-      fetchNews: (page, limit, category_name) => {
-        dispatch(fetchNews(page, limit, category_name))  
+      fetchSearchResult: (page, limit, phrase) => {
+        dispatch(fetchSearchResult(page, limit, phrase))  
       },
       onChange: value => {
         dispatch(onChange(value))
@@ -68,4 +70,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewsList);
+export default connect(mapStateToProps, mapDispatchToProps)(Search);

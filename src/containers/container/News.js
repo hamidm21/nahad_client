@@ -6,9 +6,9 @@ import { fetchNews } from '../../actions/News/actions';
 import loading from '../../assets/loading/Spin-1.3s-200px.svg'
 
 class News extends Component {
-  constructor(props) {
-    super(props)
-}
+//   constructor(props) {
+//     super(props)
+// }
 
   componentDidMount() {
     this.props.fetchNews(this.props.match.params.id)

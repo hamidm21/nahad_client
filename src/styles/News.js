@@ -25,6 +25,10 @@ export const StyledNewsImage = styled.div `
     `}
     border-radius: 5px;
 
+    @media (max-width: 460px) {
+        min-height: 300px;
+        border-radius: 0px;
+    }
 
 `
 
@@ -40,6 +44,10 @@ export const StyledDescription = styled.h3 `
 export const StyledNewsTitle = styled.h1 `
 
     padding: 30px 20px;
+    direction: rtl;
+    @media (max-width: 460px) {
+        padding: 10px 10px;
+    }
 
 `
 
@@ -56,6 +64,10 @@ export const StyledInfoContainer = styled.div `
 export const StyledNewsInfo = styled.p `
 
     padding: 40px 50px;
+    direction: rtl;
+    @media (max-width: 460px) {
+        padding: 10px 10px;
+    }
 
 `
 
@@ -69,6 +81,9 @@ export const StyledTextContainer = styled.div `
     justify-content: center;
     padding: 10px 20px;
     direction: rtl;
+    /* @media (max-width: 460px) {
+        width: 90%;
+    } */
 
 `
 

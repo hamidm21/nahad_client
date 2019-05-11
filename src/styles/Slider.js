@@ -9,9 +9,10 @@ export const StyledContainer = styled.div `
     margin-top: 20px;
     width: 85%;
     text-align: center;
-    /* @media (max-width: 470px) {
-        height: 200px;
-    } */
+    @media (max-width: 470px) {
+        /* height: 200px; */
+        width: 90%;
+    }
     /* overflow: hidden; */
 
 `
@@ -34,9 +35,12 @@ export const StyledArrow = styled.div `
 
     /* z-index: 2; */
     position: absolute;
-    left: ${props => props.left};
+    left: ${props => props.right ? '93%' : '3%'};
     top: 150%;
     /* display: none; */
+    @media (max-width: 460px) {
+        left: ${props => props.right ? '85%' : '1%'};
+    }
 
 `
 
@@ -48,10 +52,12 @@ export const StyledNewsTitle = styled.h3 `
     right: 40px;
     padding: 5px;
     color: white;
-    border: solid #0069A1 2px;
+    border: solid rgb(53, 131, 224) 1px;
     border-radius: 8px;
     direction: rtl;
-
+    @media (max-width: 460px) {
+        font-size: 15px;
+    }
 
 `
 
@@ -65,6 +71,10 @@ export const StyledNewsDescription = styled.h4 `
     border: solid #0069A1 2px;
     border-radius: 8px;
     direction: rtl;
+
+    @media (max-width: 460px) {
+        display: none;
+    }
 
 `
 

@@ -21,7 +21,7 @@ export default class Slider extends Component {
 
         const LeftArrow = () => {
             return (
-                <StyledArrow onClick={this.props.nextSlide} left='3%' >
+                <StyledArrow onClick={this.props.nextSlide} left >
                     <i class="far fa-arrow-alt-circle-left fa-3x"></i>
                 </StyledArrow>
             )
@@ -29,7 +29,7 @@ export default class Slider extends Component {
 
         const RightArrow = () => {
             return (
-                <StyledArrow onClick={this.props.prevSlide} left='90%'>
+                <StyledArrow onClick={this.props.prevSlide} right >
                     <i class="far fa-arrow-alt-circle-right fa-3x"></i>
                 </StyledArrow>
             )

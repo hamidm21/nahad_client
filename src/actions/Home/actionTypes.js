@@ -8,3 +8,4 @@ export const ON_PAGINATE = 'on_paginate';
 export const FETCH_CATEGORY_NEWS = 'fetch_category_news';
 export const FETCH_CATEGORY_NEWS_SUCCESS = 'fetch_category_news_success';
 export const FETCH_CATEGORY_NEWS_FAILED = 'fetch_category_news_failed';
+export const ON_CHANGE = 'on_change';

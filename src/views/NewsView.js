@@ -9,11 +9,11 @@ export class NewsView extends Component {
         return(
             <StyledGrid>
                 <Header />
-                    <NavBar />
+                    {/* <NavBar /> */}
                         <StyledMain>
                             <FullNews news={this.props.news} related={this.props.related} />
                         </StyledMain>
-                    <SideBar />
+                    {/* <SideBar /> */}
                 <Footer />
             </StyledGrid>
         )

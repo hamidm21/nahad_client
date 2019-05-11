@@ -10,8 +10,9 @@ html{
 
     height: 100%;
     width: 100%;
-    background-color: #0090a1;
-    overflow-x: hidden;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,135,190,1) 0%, rgba(9,133,201,1) 100%);
+    
 }
 
 body {

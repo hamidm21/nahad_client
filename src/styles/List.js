@@ -9,8 +9,12 @@ export const StyledContainer = styled.div `
     justify-content: space-evenly;
     width: 100%;
     height: 100%;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem; 
     align-items: flex-start;
+
+    @media (max-width: 460px) {
+        display: none;
+    }
 
 `
 
@@ -30,6 +34,20 @@ export const StyledNews = styled.div `
     :hover {
         box-shadow: 0 10px 40px 0 rgba(62,57,107,.2),0 2px 9px 0 rgba(62,57,107,.2);
         cursor: pointer;
+    }
+
+    @media (max-width: 460px) {
+        width: 20rem;
+        height: 40rem;
+        margin: 1rem;
+        position: relative;
+        /* border-radius: 8px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        background-color: rgb(247,247,247);
     }
 
 `

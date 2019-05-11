@@ -1,7 +1,7 @@
 import {
-    FETCH_NEWS,
-    FETCH_NEWS_FAILED,
-    FETCH_NEWS_SUCCESS,
+    SEARCH_NEWS,
+    SEARCH_NEWS_FAILED,
+    SEARCH_NEWS_SUCCESS,
     ON_CHANGE
 } from '../../actions/NewsList/actionTypes'
 
@@ -26,11 +26,12 @@ const init = {
 
 export default function (state = init, action) {
     switch (action.type) {
-        case FETCH_NEWS:
-            return Object.assign({}, state, {loading: true})
-        case FETCH_NEWS_SUCCESS:
-            return Object.assign({}, state, {news: action.data.news, pages: Math.ceil(action.data.totalCount/10), loading: false})
-        case FETCH_NEWS_FAILED:
+        case SEARCH_NEWS:
+            return Object.assign({}, state);
+        case SEARCH_NEWS_SUCCESS:
+            console.log(action.data.search)
+            return Object.assign({}, state, {news: action.data.search, loading: false})
+        case SEARCH_NEWS_FAILED:
             return Object.assign({}, state, {errorMessage: action.message})
         case ON_CHANGE: 
             return Object.assign({}, state, {

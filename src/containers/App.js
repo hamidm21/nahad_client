@@ -5,6 +5,7 @@ import Register from './container/Register';
 import Login from './container/Login';
 import NewsList from './container/NewsList';
 import News from './container/News';
+import Search from './container/Search';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           <Route path='/login' name='Login' component={ Login } />
           <Route path='/newsList/:category' name='News list' component={ NewsList } />
           <Route path='/news/:id' name='News' component={ News } />
+          <Route path='/searchResult/:search' name='Search' component={ Search } />
         </Switch> 
       </Router>
     );

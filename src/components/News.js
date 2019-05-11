@@ -28,11 +28,11 @@ export class FullNews extends Component {
                     <div dangerouslySetInnerHTML={{__html: this.props.news.text_tag}} />
                 </StyledTextContainer>
                 <StyledSuggestion>
-                    {/* <StyledDescription>
+                    <StyledDescription>
                     مطالب مرتبط
-                    </StyledDescription> */}
+                    </StyledDescription>
                 {
-                    this.props.related.map((news, index) => <List title={news.title} description={news.description.substr(0, 100)} author={news.author} date={moment(news.moment, 'jYYYY/jMM/jDD HH:mm').format('jYY/jMM/jDD')} img={news.img} id={news._id} key={index}></List>)
+                    <List news={this.props.related} />
                 }
                 </StyledSuggestion>
             </StyledNewsContainer>

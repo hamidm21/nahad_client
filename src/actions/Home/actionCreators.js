@@ -73,3 +73,16 @@ export function fetchCategoryNewsFailed(message, result, data){
     data
   }
 }
+
+export function onChange(value){
+  return {
+    type: actionTypes.ON_CHANGE,
+    value
+  }
+}
+
+// export function submitChange() {
+//   return {
+//     type: actionTypes.SUBMIT_CHANGE
+//   }
+// }

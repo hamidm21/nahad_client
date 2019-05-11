@@ -7,7 +7,9 @@ import {
     PREV_SLIDE,
     FETCH_CATEGORY_NEWS,
     FETCH_CATEGORY_NEWS_FAILED,
-    FETCH_CATEGORY_NEWS_SUCCESS
+    FETCH_CATEGORY_NEWS_SUCCESS,
+    ON_CHANGE,
+    // SUBMIT_CHANGE
 } from '../../actions/Home/actionTypes'
 
 
@@ -24,7 +26,8 @@ const init = {
     toggle_id: '',
     loading: true,
     errorMessage: '',
-    current_slide: 0
+    current_slide: 0,
+    search_value: ''
 };
 
 export default function (state = init, action) {
@@ -53,9 +56,22 @@ export default function (state = init, action) {
             }else
                 return Object.assign({}, state, {current_slide: --state.current_slide})
         case FETCH_CATEGORY_NEWS:
+            return state;
+        case FETCH_CATEGORY_NEWS_SUCCESS: 
             return Object.assign({}, state, {
-                category_news: action.data
+                category_news: action.data,
+                loading: false
             })
+        case FETCH_CATEGORY_NEWS_FAILED:
+            return state;
+        case ON_CHANGE: 
+            return Object.assign({}, state, {
+                search_value: action.value
+            })
+        // case SUBMIT_CHANGE:
+        //     return Object.assign({}, state, {
+                    
+        //     })
         default : 
             return state; 
 

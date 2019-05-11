@@ -9,17 +9,17 @@ export class List extends Component {
         return(
             <StyledContainer>
                 {
-                    this.props.news.map((news, index) => 
+                    this.props.news.map((news) => 
                     <StyledNews>
                     <StyledNewsImage img={"http://www.goftare.com:4231/"+ news.img}/>
                     <StyledNewsInfo>
                         <StyledNewsTitle>
-                        <Link style={{textDecoration: 'none', color: 'black'}} to={`/news/${news.id}`}>
+                        <Link style={{textDecoration: 'none', color: 'black'}} to={`/news/${news._id}`}>
                             {news.title}
                         </Link>
                         </StyledNewsTitle>
                         <StyledNewsDiscription>
-                        <Link style={{textDecoration: 'none', color: 'black'}} to={`/news/${news.id}`}>
+                        <Link style={{textDecoration: 'none', color: 'black'}} to={`/news/${news._id}`}>
                             {news.description.length >= 80 ? news.description.substr(0, 80) + '...' : news.description}
                             </Link>
                         </StyledNewsDiscription>
@@ -31,6 +31,7 @@ export class List extends Component {
                         </StyledNewsDate>
                     </StyledNewsInfo>
                 </StyledNews>
+                // key={index}
                     )
                 }
             </StyledContainer>

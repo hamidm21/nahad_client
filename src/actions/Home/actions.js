@@ -32,14 +32,15 @@ export function fetchCategoryNews () {
                 multiMedia.data.result && 
                 book.data.result && 
                 all.data.result) {
-                const data = {
-                    activities: activities.data.data,
-                    nahadNews: nahadNews.data.data,
-                    uniNews: uniNews.data.data,
-                    multiMedia: multiMedia.data.data,
-                    book: book.data.data,
-                    all: all.data.data
-                }
+                const data = [
+                    Object.assign({}, activities.data.data, {name: 'فعالان عرصه فرهنگی'}),
+                    Object.assign({}, nahadNews.data.data, {name: 'اخبار و فعالیت های نهاد'}),
+                    Object.assign({}, uniNews.data.data, {name: 'اخبار فرهنگی دانشگاه'}),
+                    Object.assign({}, multiMedia.data.data, {name: 'نشریه صوتی و تصویری'}),
+                    Object.assign({}, book.data.data, {name: 'معرفی کتاب'}),
+                    Object.assign({}, all.data.data, {name: 'همه خبر ها'})
+                ]
+                console.log({data})
                 dispatch(actionCreators.fetchCategoryNewsSuccess(all.data.message, all.data.result, data))
             } else {
                 dispatch(actionCreators.fetchCategoryNewsFailed('error in get category news'))
