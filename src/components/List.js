@@ -11,12 +11,14 @@ export class List extends Component {
                 {
                     this.props.news.map((news) => 
                     <StyledNews>
-                    <StyledNewsImage img={"http://www.goftare.com:4231/"+ news.img}/>
+                    <StyledNewsImage img={"http://46.105.163.141:4231/"+ news.img}    onClick={()=>{
+                           window.location.replace(`/news/${news._id}`);
+                        }}  />
                     <StyledNewsInfo>
                         <StyledNewsTitle>
-                        <Link style={{textDecoration: 'none', color: 'black'}} to={`/news/${news._id}`}>
+                        <a style={{textDecoration: 'none', color: 'black'}} href={`/news/${news._id}`} >
                             {news.title}
-                        </Link>
+                        </a>
                         </StyledNewsTitle>
                         <StyledNewsDiscription>
                         <Link style={{textDecoration: 'none', color: 'black'}} to={`/news/${news._id}`}>

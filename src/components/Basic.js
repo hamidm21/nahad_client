@@ -40,22 +40,22 @@ const styles = {
       const sideList = (
         <div className={classes.list}>
           <List style={{width: '100%'}}>
-            {['معرفی نهاد', 'هیئت دانشجویی', 'کانونها', 'اساس نامه نهاد', 'تماس با نهاد'].map((text, index) => (
+            {['خودرو', 'اپلیکیشن', 'تکنولوژی', 'بازی', 'همه خبر ها', 'علم و دانش' , 'کسب و کار' , 'بررسی'].map((text, index) => (
               <ListItem style={{width: '100%'}} button key={text}>
-                <p style={{display: 'flex', justifyContent: 'flex-start', width: '100%', direction: 'rtl'}}>
+                <a style={{textDecoration: 'none' , color: 'black' , display: 'flex', justifyContent: 'flex-start', width: '100%', direction: 'rtl'}} href={`/newsList/${text}`}>
                 {text}
-                </p>
+                </a>
               </ListItem>
             ))}
           </List>
           <Divider />
           <List>
-            {[{name: 'ارتباط با نهاد', icon: "fas fa-phone fa-1x"}, {name: 'ضیافت اندیشه استاید', icon: 'fas fa-handshake fa-1x'}, {name: 'اپلیکیشن نهاد', icon: 'fas fa-mobile-alt fa-1x'}].map((text, index) => (
+            {[{name: 'پنل مدیریتی', icon: "fas fa-phone fa-1x" , link : 'panel/main'}, {name: 'اپلیکیشن نهاد', icon: 'fas fa-mobile-alt fa-1x' , link : 'latest.apk'}].map((text, index) => (
               <ListItem style={{display: 'flex', justifyContent: 'flex-start', width: '100%', direction: 'rtl'}} button key={text}>
                 <i style={{paddingLeft: '10px'}} class={text.icon}></i>
-                <p>
+                <Link style={{textDecoration: 'none' , color: 'black' , display: 'flex', justifyContent: 'flex-start', width: '100%', direction: 'rtl'}} to={`/${text.link}`}>
                 {text.name}
-                </p>
+                </Link>
               </ListItem>
             ))}
           </List>
@@ -93,14 +93,14 @@ export class Header extends Component {
         return (
             <StyledHeader>
               <div style={{display: 'flex', width: '100%', justifyContent: 'space-around'}}>
-              <div style={{width: '30%', display: 'flex', justifyContent: 'space-around'}}>
-                <StyledImg height='160px' alt={'نماد دانشگاه لرستان'} src={'http://limoographic.com/wp-content/uploads/2017/05/46.png'} />
+              <div style={{width: '40%', display: 'flex', justifyContent: 'space-around'}}>
+                <StyledImg height='160px' alt={'نماد دانشگاه لرستان'} src={'http://46.105.163.141:4231/vendors/build/images/logo8.png'} />
               </div>
-              <div style={{width: '30%', display: 'flex', justifyContent: 'space-around'}}>
-                <StyledImg height='160px' alt={'نماد نهاد'} src={'http://www.nahad.ir/uploads/546_4962_1494319312340_hed_vasat.png'} />
-              </div>
-              <div style={{width: '30%', display: 'flex', justifyContent: 'space-around'}}>
-                <StyledImg height='160px' alt={'عکس أقا و امام'} src={'http://www.nahad.ir/uploads/546_4962_1494318708765_hed_rast.png'} />
+              <div style={{width: '0%', display: 'flex', justifyContent: 'space-around'}}>
+                <StyledImg height='160px'  />
+              </div> 
+              <div style={{width: '15%', display: 'flex', paddingTop : '20px' , justifyContent: 'space-around'}}>
+                <StyledImg height='160px' alt={'عکس أقا و امام'} src={'http://isic.ir/wp-content/uploads/2019/08/Lorestan-University.png'} />
               </div>
               </div>
             </StyledHeader>
@@ -123,7 +123,7 @@ export class Footer extends Component {
                     {/* <StyledFooterImage src={'http://www.nahad.ir/uploads/%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87_%D9%81%D8%B1%D9%87%D9%86%DA%AF%DB%8C%D8%A7%D9%86_733257.png'}></StyledFooterImage> */}
                     {/* <StyledFooterImage src={'http://www.nahad.ir/uploads/r_5_130616014958_757404.png'}></StyledFooterImage> */}
                     {/* <StyledFooterImage src={'http://www.nahad.ir/uploads/77_733253.png'}></StyledFooterImage> */}
-                    <div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center'}}>
+                    {/* <div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center'}}>
                     <a href={'http://leader.ir'}>
                     <StyledFooterImage src={'http://www.nahad.ir/uploads/logo_b_757406.png'}></StyledFooterImage>   
                     </a>
@@ -133,11 +133,11 @@ export class Footer extends Component {
                     <a href={'http://nahad.ir'}>
                     <StyledFooterImage src={'http://www.nahad.ir/uploads/546_4610_1484122168102_logo_site.png'}></StyledFooterImage>
                     </a>
-                    </div>
-                    <div style={{display: 'flex', marginTop: '20px', marginBottom: '20px'}}>
+                  </div> */ }
+                    <div style={{display: 'flex', marginTop: '20px', marginBottom: '20px'}}> 
                       <p style={{padding: '10px'}}>
 
-                      شماره تماس نهاد :‌ ۰۹۱۶۶۵۹۹۵۱۶
+                        ارتباط با ما : ‌09376628158 
                       </p>
                       {/* <p style={{padding: '10px'}}>
                         ایمیل نهاد : hodimad21@gmail.com

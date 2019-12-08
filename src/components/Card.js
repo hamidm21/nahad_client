@@ -16,15 +16,15 @@ export class Category extends Component {
                         </StyledCategoryTitle>
                         <StyledCategoryMainNews >
                         <Link style={{textDecoration:'none', color: 'black'}} to={`/news/${news.news[0] ? news.news[0]._id : null}`} >
-                            <StyledCategoryMainImage img={news.news[0] ? 'http://www.goftare.com:4231/' + news.news[0].img : null} />
+                            <StyledCategoryMainImage img={news.news[0] ? 'http://46.105.163.141:4231/' + news.news[0].img : null} />
                             </Link>
                             <StyledCategoryNewsTitle>
-                                <Link style={{textDecoration:'none',color: 'black'}} to={`/news/${news.news[0] ? news.news[0]._id : null}`} >
+                                <Link style={{textDecoration:'none',color: '#397cd4'}} to={`/news/${news.news[0] ? news.news[0]._id : null}`} >
                                     {news.news[0] ? news.news[0].title.length > 36 ? news.news[0].title.substr(0, 36) + ' ..' : news.news[0].title : null}
                                 </Link>
                             </StyledCategoryNewsTitle>
                             <StyledCategoryNewsDescription>
-                            <Link style={{textDecoration:'none',color: 'black'}} to={`/news/${news.news[0] ? news.news[0]._id : null}`} >
+                            <Link style={{textDecoration:'none',color: '#696969'}} to={`/news/${news.news[0] ? news.news[0]._id : null}`} >
                                     {news.news[0] ? news.news[0].description.length > 46 ? news.news[0].description.substr(0, 46) + ' ...' : news.news[0].description: null}
                             </Link>
                             </StyledCategoryNewsDescription>
@@ -37,15 +37,15 @@ export class Category extends Component {
                         </StyledCategoryMainNews>
                         <StyledCategoryNews>
                                 <Link style={{textDecoration:'none', color: 'black'}} to={`/news/${news.news[1] ? news.news[1]._id : null}`} >
-                            <StyledCategoryNewsImage img={news.news[1] ? 'http://www.goftare.com:4231/' + news.news[1].img : null} />
+                            <StyledCategoryNewsImage img={news.news[1] ? 'http://46.105.163.141:4231/' + news.news[1].img : null} />
                                 </Link>
                             <StyledCategoryNewsTitle>
-                                <Link style={{textDecoration:'none',color: 'black'}} to={`/news/${news.news[1] ? news.news[1]._id : null}`} >
+                                <Link style={{textDecoration:'none',color: '#397cd4'}} to={`/news/${news.news[1] ? news.news[1]._id : null}`} >
                             {news.news[1] ? news.news[1].title.length > 18 ? news.news[1].title.substr(0, 18) + ' ..' : news.news[1].title : null}
                                 </Link>
                             </StyledCategoryNewsTitle>
                             <StyledCategoryNewsDescription>
-                                <Link style={{textDecoration:'none', color: 'black'}} to={`/news/${news.news[1] ? news.news[1]._id : null}`} >
+                                <Link style={{textDecoration:'none', color: '#696969'}} to={`/news/${news.news[1] ? news.news[1]._id : null}`} >
                             {news.news[1] ? news.news[1].description.length > 22 ? news.news[1].description.substr(0, 22) + ' ..' : news.news[1].description: null}
                                 </Link>
                             </StyledCategoryNewsDescription>
@@ -58,15 +58,15 @@ export class Category extends Component {
                         </StyledCategoryNews>
                          <StyledCategoryNews>
                                 <Link style={{textDecoration:'none', color: 'black'}} to={`/news/${news.news[2] ? news.news[2]._id : null}`} >
-                            <StyledCategoryNewsImage img={news.news[2] ? 'http://www.goftare.com:4231/' + news.news[2].img : null} />
+                            <StyledCategoryNewsImage img={news.news[2] ? 'http://46.105.163.141:4231/' + news.news[2].img : null} />
                                 </Link>
                             <StyledCategoryNewsTitle>
-                                <Link style={{textDecoration:'none',color: 'black'}} to={`/news/${news.news[2] ? news.news[2]._id : null}`} >
+                                <Link style={{textDecoration:'none',color: '#397cd4'}} to={`/news/${news.news[2] ? news.news[2]._id : null}`} >
                             {news.news[2] ? news.news[2].title.length > 18 ? news.news[2].title.substr(0, 18) + ' ..' : news.news[2].title : null}
                                 </Link>
                             </StyledCategoryNewsTitle>
                             <StyledCategoryNewsDescription>
-                                <Link style={{textDecoration:'none', color: 'black'}} to={`/news/${news.news[2] ? news.news[2]._id : null}`} >
+                                <Link style={{textDecoration:'none', color: '#696969'}} to={`/news/${news.news[2] ? news.news[2]._id : null}`} >
                             {news.news[2] ? news.news[2].description.length > 22 ? news.news[2].description.substr(0, 22) + ' ..' : news.news[2].description: null}
                                 </Link>
                             </StyledCategoryNewsDescription>

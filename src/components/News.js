@@ -9,7 +9,7 @@ export class FullNews extends Component {
     render() {
         return (
             <StyledNewsContainer>
-                <StyledNewsImage min img={"http://www.goftare.com:4231/"+ this.props.news.img} />
+                <StyledNewsImage min img={"http://46.105.163.141:4231/"+ this.props.news.img} />
                 <StyledInfoContainer>
                     <StyledNewsInfo>
                        نویسنده : {this.props.news.author}

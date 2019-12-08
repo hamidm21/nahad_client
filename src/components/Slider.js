@@ -8,7 +8,7 @@ export default class Slider extends Component {
         const Slide = () => {
            return (
             <StyledSlide>
-                <StyledNewsImage img={"http://www.goftare.com:4231/"+ this.props.slider_news[this.props.current_slide].img} />
+                <StyledNewsImage img={"http://46.105.163.141:4231/"+ this.props.slider_news[this.props.current_slide].img} />
                 <Link to={`/news/${this.props.slider_news[this.props.current_slide]._id}`} >
                 <StyledNewsTitle>{this.props.slider_news[this.props.current_slide].title}</StyledNewsTitle>
                 </Link>
@@ -22,7 +22,7 @@ export default class Slider extends Component {
         const LeftArrow = () => {
             return (
                 <StyledArrow onClick={this.props.nextSlide} left >
-                    <i class="far fa-arrow-alt-circle-left fa-3x"></i>
+                    <i class="fas fa-arrow-left fa-2x"></i>
                 </StyledArrow>
             )
         }
@@ -30,7 +30,8 @@ export default class Slider extends Component {
         const RightArrow = () => {
             return (
                 <StyledArrow onClick={this.props.prevSlide} right >
-                    <i class="far fa-arrow-alt-circle-right fa-3x"></i>
+                    {/* <i class="far fa-arrow-alt-circle-right fa-3x"></i> */}
+                    <i class="fas fa-arrow-right fa-2x"></i>
                 </StyledArrow>
             )
         }

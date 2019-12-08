@@ -51,8 +51,8 @@ export const StyledNewsTitle = styled.h3 `
     top: 160%;
     right: 40px;
     padding: 5px;
-    color: white;
-    border: solid rgb(53, 131, 224) 1px;
+    color: black;
+    background :#A9A9A9  
     border-radius: 8px;
     direction: rtl;
     @media (max-width: 460px) {
@@ -67,8 +67,8 @@ export const StyledNewsDescription = styled.h4 `
     top: 160%;
     right: 40px;
     padding: 5px;
-    color: white;
-    border: solid #0069A1 2px;
+    color: #1a1a1a;
+    background :#A9A9A9  
     border-radius: 8px;
     direction: rtl;
 
@@ -85,7 +85,9 @@ export const StyledSlider = styled.div `
     height: 27rem;
     display: flex;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 1px;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 11px 15px 5px rgba(0,0,0,0); 
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 11px 15px 5px rgba(0,0,0,0);
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     scroll-snap-points-x: repeat(500px);
@@ -117,9 +119,8 @@ export const StyledSlide = styled.div `
     height: 100%;
     display: flex;
     align-items: center;
-    background: rgb(53, 131, 224);
+    background: #A9A9A9 ;
     justify-content: center;
-    border-radius: 10px;
     transform-origin: center center;
     transform: scale(1);
     transition: transform 0.5s;

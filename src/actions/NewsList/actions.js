@@ -22,20 +22,26 @@ export function fetchNews(page, limit, category_name) {
         dispatch(actionCreators.fetchNews());
         let category = ''
         switch (category_name) {
-          case 'فعالان عرصه فرهنگی':
+          case 'تکنولوژی':
             category = 'activities'
             break;
-          case 'اخبار و فعالیت های نهاد': 
-            category = 'nahadNews'
+          case 'خودرو': 
+            category = 'car'
             break;
-          case 'اخبار فرهنگی دانشگاه':
-            category = 'uniNews'
+          case 'اپلیکیشن':
+            category = 'application'
             break;
-          case'نشریه صوتی و تصویری':
-            category = 'multiMedia'
+          case'بازی':
+            category = 'games'
             break;
-          case 'معرفی کتاب': 
-            category = 'book'
+            case 'علم و دانش': 
+            category = 'science'
+            break;
+            case 'کسب و کار': 
+            category = 'business'
+            break;
+            case 'بررسی': 
+            category = 'check'
             break;
           case 'همه خبر ها':
             category = 'all'

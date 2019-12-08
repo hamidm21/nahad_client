@@ -20,24 +20,30 @@ export function fetchCategoryNews () {
     return async dispatch => {
         try {
             dispatch(actionCreators.fetchCategoryNews())
-            const activities = await axios.post('/news/find_by_category', {page: 1, limit: 3, category: 'activities'})
-            const nahadNews = await axios.post('/news/find_by_category', {page: 1, limit: 3, category: 'nahadNews'})
-            const uniNews = await axios.post('/news/find_by_category', {page: 1, limit: 3, category: 'uniNews'})
-            const multiMedia = await axios.post('/news/find_by_category', {page: 1, limit: 3, category: 'multiMedia'})
-            const book = await axios.post('/news/find_by_category', {page: 1, limit: 3, category: 'book'})
+            const technology = await axios.post('/news/find_by_category', {page: 1, limit: 3, category: 'technology'})
+            const science = await axios.post('/news/find_by_category', {page: 1, limit: 3, category: 'science'})
+            const car = await axios.post('/news/find_by_category', {page: 1, limit: 3, category: 'car'})
+            const application = await axios.post('/news/find_by_category', {page: 1, limit: 3, category: 'application'})
+            const games = await axios.post('/news/find_by_category', {page: 1, limit: 3, category: 'games'})
+            const business = await axios.post('/news/find_by_category', {page: 1, limit: 3, category: 'business'})
+            const check = await axios.post('/news/find_by_category', {page: 1, limit: 3, category: 'check'})
             const all = await axios.post('/news/find_by_category', {page: 1, limit: 3, category: 'all'})
-            if(activities.data.result && 
-                nahadNews.data.result && 
-                uniNews.data.result && 
-                multiMedia.data.result && 
-                book.data.result && 
+            if(technology.data.result && 
+                science.data.result && 
+                car.data.result && 
+                application.data.result && 
+                games.data.result && 
+                business.data.result && 
+                check.data.result && 
                 all.data.result) {
                 const data = [
-                    Object.assign({}, activities.data.data, {name: 'فعالان عرصه فرهنگی'}),
-                    Object.assign({}, nahadNews.data.data, {name: 'اخبار و فعالیت های نهاد'}),
-                    Object.assign({}, uniNews.data.data, {name: 'اخبار فرهنگی دانشگاه'}),
-                    Object.assign({}, multiMedia.data.data, {name: 'نشریه صوتی و تصویری'}),
-                    Object.assign({}, book.data.data, {name: 'معرفی کتاب'}),
+                    Object.assign({}, technology.data.data, {name: 'تکنولوژی'}),
+                    Object.assign({}, science.data.data, {name: 'علم و دانش'}),
+                    Object.assign({}, car.data.data, {name: 'خودرو'}),
+                    Object.assign({}, application.data.data, {name: 'اپلیکیشن'}),
+                    Object.assign({}, games.data.data, {name: 'بازی'}),
+                    Object.assign({}, business.data.data, {name: 'کسب و کار'}),
+                    Object.assign({}, check.data.data, {name: 'بررسی'}),
                     Object.assign({}, all.data.data, {name: 'همه خبر ها'})
                 ]
                 console.log({data})

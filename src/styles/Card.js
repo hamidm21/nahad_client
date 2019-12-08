@@ -18,7 +18,6 @@ export const StyledContainer = styled.div `
 
 export const StyledCategory = styled.div `
 
-    /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
     width: 20rem;
     height: 40rem;
     margin: 1rem;
@@ -44,6 +43,7 @@ export const StyledCategoryTitle = styled.h4 `
     width: 100%;
     direction: rtl;
     margin-bottom: 0.5rem;
+    color : darkslategrey ;
 
 `
 
@@ -113,8 +113,14 @@ export const StyledCategoryMainNews = styled.div `
 export const StyledCategoryNewsTitle = styled.h2 `
 
     padding: 10px;
+    font-weight: 500 ;
+    color : #397cd4  ;
     font-size: 1rem; 
 
+
+    :hover,:focus {
+        text-shadow: 0.5px 2px 5px rgba(0,0,0,0.2);
+        }
 
 `
 
@@ -122,7 +128,7 @@ export const StyledCategoryNewsDescription = styled.p `
 
     padding-right: 10px;
     font-size: 14px;
-
+    font-weight: 400 ;
 
 `
 
@@ -131,7 +137,7 @@ export const StyledCategoryNewsAuthor = styled.p `
     padding-right: 15px;
     color: #b5b5b5;
     font-family: 'IRANSans';
-    font-size: 0.9rem;
+    font-size: 0.6rem;
     padding: 10px;
     position: absolute;
     bottom: 0;
@@ -145,7 +151,7 @@ export const StyledCategoryNewsDate = styled.p `
     color: rgba(0,0,0,.54);
     color: #b5b5b5;
     font-family: 'IRANSans';
-    font-size: 0.9rem;
+    font-size: 0.6rem;
     padding: 10px;
     position: absolute;
     bottom: 0;

@@ -10,9 +10,11 @@ html{
 
     height: 100%;
     width: 100%;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,135,190,1) 0%, rgba(9,133,201,1) 100%);
-    
+    /* background: rgb(2,0,36); */
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,135,190,1) 0%, rgba(9,133,201,1) 100%); */
+    background: #FFF;
+    /* background: #010b11; */
+    /* background: #fff5ee; */
 }
 
 body {
@@ -27,6 +29,12 @@ body {
     height: 100%;
     width: 100%;
 
+}
+
+.fas.fa-2x {
+    /* color: rgba(255, 254, 254, 0.80);  */
+    color: #A9A9A9;
+    filter: blur(0.1px);
 }
 
 @font-face {
@@ -76,3 +84,35 @@ body {
     src: url('../assets/fonts/eot/IRANSansWeb.eot');
     src: url('../assets/fonts/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../assets/fonts/woff2/IRANSansWeb.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../assets/fonts/woff/IRANSansWeb.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../assets/fonts/ttf/IRANSansWeb.ttf') format('truetype');
 }
+
+
+  
+/* font-Parastoo */
+@font-face {
+    font-family: Parastoo;
+    src: url('http://fonts.codearena.ir/rastikerdar/parastoo/parastoo.eot');
+    src: url('http://fonts.codearena.ir/rastikerdar/parastoo/parastoo.eot?#iefix') format('embedded-opentype'),
+         url('http://fonts.codearena.ir/rastikerdar/parastoo/parastoo.woff') format('woff'),
+         url('http://fonts.codearena.ir/rastikerdar/parastoo/parastoo.ttf') format('truetype');
+    font-weight: normal;
+  }  
+/* font-Shabnam */
+@font-face {
+    font-family: Shabnam;
+    src: url('http://fonts.codearena.ir/rastikerdar/shabnam/shabnam.eot');
+    src: url('http://fonts.codearena.ir/rastikerdar/shabnam/shabnam.eot?#iefix') format('embedded-opentype'),
+         url('http://fonts.codearena.ir/rastikerdar/shabnam/shabnam.woff') format('woff'),
+         url('http://fonts.codearena.ir/rastikerdar/shabnam/shabnam.ttf') format('truetype');
+    font-weight: normal;
+  }  
+/* font-Titrbold */
+@font-face {
+    font-family: Titrbold;
+    src: url('http://fonts.codearena.ir/b/titrbold/titrbold.eot');
+    src: url('http://fonts.codearena.ir/b/titrbold/titrbold.eot?#iefix') format('embedded-opentype'),
+         url('http://fonts.codearena.ir/b/titrbold/titrbold.woff') format('woff'),
+         url('http://fonts.codearena.ir/b/titrbold/titrbold.ttf') format('truetype');
+    font-weight: normal;
+  }
+
+

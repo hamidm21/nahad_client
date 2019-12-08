@@ -16,10 +16,10 @@ export class HomeView extends Component {
                 <NavDrawer />
             </div>
                 <Slider current_slide={this.props.current_slide} slider_news={this.props.slider_news} nextSlide={this.props.nextSlide} prevSlide={this.props.prevSlide} />
-                <StyledCategoryDevider>
+                {/* <StyledCategoryDevider>
                      دسته بندی خبر ها
-                </StyledCategoryDevider>
-                <Category category_news={this.props.category_news} names={['اخبار و فعالیت های نهاد', 'اخبار فرهنگی دانشگاه', 'فعالان عرصه فرهنگی', 'نشریه صوتی و تصویری', 'همه خبر ها', 'معرفی کتاب']} />  
+                </StyledCategoryDevider> */}
+                <Category category_news={this.props.category_news} names={['خودرو', 'اپلیکیشن', 'تکنولوژی', 'بازی', 'همه خبر ها', 'علم و دانش' , 'کسب و کار' , 'بررسی']} />  
             </StyledMain>
             <Footer />
         </StyledGrid>
